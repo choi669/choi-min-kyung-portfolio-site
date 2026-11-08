@@ -16,6 +16,7 @@ body.motion-ready .hero .lead,body.motion-ready .hero .hero-action{animation:sof
 .motion-reveal{opacity:0;transform:translate3d(0,24px,0);transition:opacity .85s var(--motion-ease),transform .95s var(--motion-ease);transition-delay:var(--reveal-delay,0ms)}
 .motion-reveal.is-visible{opacity:1;transform:none}
 .project-card,.gallery-card,.case-results figure{transition:transform .65s var(--motion-ease)}
+.project-card.motion-reveal,.gallery-card.motion-reveal{transition:opacity .85s var(--motion-ease),transform .95s var(--motion-ease)}
 .project-thumb{transition:box-shadow .65s var(--motion-ease)}
 @media(hover:hover) and (pointer:fine){.project-card:hover{transform:translateY(-6px)}.project-card:hover .project-thumb{box-shadow:0 16px 38px -20px rgba(36,40,32,.36)}.gallery-card:hover,.case-results figure:hover{transform:translateY(-4px)}}
 .hero .hero-action,.contact-link{transition:background .3s,color .3s,transform .45s var(--motion-ease),border-color .3s}

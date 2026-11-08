@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="최민경의 BX · WEB 디자인 포트폴리오. 6:47 PM / CALORE와 오설록 작업을 소개한다.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="최민경 | BX · WEB DESIGN PORTFOLIO">
+  <meta property="og:description" content="6:47 PM / CALORE와 오설록 작업을 담은 최민경의 BX·웹 디자인 포트폴리오다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- og:url / og:image / canonical are added after a real deployment URL is configured. -->
+  <title>최민경 | BX · WEB DESIGN PORTFOLIO</title>
+  <style>
+    /* DAY47: local assets, editorial refinement of the approved structure. */
+    :root { --ink:#161616; --white:#fff; --panel:#e8e8e8; --muted:#595959; --line:#cbcbcb; --surface:#f7f7f7; --space-xs:8px; --space-sm:16px; --space-md:24px; --space-lg:32px; --space-xl:48px; --space-2xl:64px; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--white); font-family: 'Noto Sans KR', 'Noto Sans CJK KR', sans-serif; font-weight:400; line-height:1.5; word-break:keep-all; overflow-wrap:break-word; }
+    a { color:inherit; }
+    button, a { -webkit-tap-highlight-color:transparent; }
+    button { font:inherit; }
+    :focus-visible { outline:3px solid #7b7b7b; outline-offset:4px; }
+    .wrap { width:min(100%,1280px); margin-inline:auto; }
+    .site-header { background:var(--white); border-bottom:1px solid #ededed; }
+    .nav { padding:26px 64px; min-height:96px; display:flex; justify-content:space-between; align-items:center; gap:24px; }
+    .brand { font-size:22px; line-height:1.4; font-weight:700; text-decoration:none; white-space:nowrap; }
+    .nav-links { display:flex; gap:56px; align-items:center; }
+    .nav-links a { font-size:18px; text-decoration:none; white-space:nowrap; }
+    .nav-links a:hover { text-decoration:underline; text-underline-offset:8px; }
+    .menu-toggle { display:none; border:1px solid var(--line); background:#fff; border-radius:3px; padding:8px 12px; cursor:pointer; }
+    .hero { background:var(--ink); color:var(--white); padding:64px; }
+    .hero-inner { display:flex; flex-direction:column; align-items:stretch; gap:24px; }
+    .eyebrow { font-size:14px; line-height:1.5; font-weight:400; letter-spacing:0.05em; margin:0; }
+    .hero .eyebrow { text-align:center; color:var(--panel); }
+    .hero h1 { margin:0; font-size:64px; font-weight:500; line-height:1.45; text-align:center; letter-spacing:-0.035em; }
+    .hero .lead { margin:0; font-size:18px; text-align:center; line-height:1.5; }
+    .hero-action { display:flex; min-height:58px; align-items:center; justify-content:center; width:100%; padding:16px; border:0; color:var(--ink); background:var(--panel); font-size:18px; opacity:.72; cursor:not-allowed; }
+    .placeholder { width:100%; display:flex; justify-content:center; align-items:center; background:var(--panel); color:var(--muted); text-align:center; font-size:18px; padding:24px; font-weight:400; }
+    .hero-visual { aspect-ratio: 16 / 9; height:auto; }
+    .section { padding:64px; }
+    .section-heading { font-size:28px; line-height:1.45; font-weight:700; margin:0 0 24px; }
+    .section-description { font-size:18px; line-height:1.5; margin:0 0 24px; }
+    .project-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:32px; }
+    .project-card { min-width:0; display:flex; flex-direction:column; gap:16px; }
+    .project-thumb { height:310px; }
+    .project-card h3 { margin:0; font-size:28px; font-weight:700; line-height:1.45; }
+    .project-card p { margin:0; font-size:18px; }
+    .card-status { color:var(--muted); font-size:18px; display:block; }
+    .gallery-section { border-top:1px solid #ececec; }
+    .gallery-hero { aspect-ratio: 16 / 9; height:auto; margin-bottom:24px; }
+    .gallery-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+    .gallery-item { height:240px; }
+    .site-footer { background:var(--ink); color:var(--white); padding:64px; }
+    .site-footer .section-heading { margin-bottom:24px; }
+    .contact-address { margin:0 0 20px; font-size:18px; overflow-wrap:anywhere; }
+    .contact-address a { text-underline-offset:4px; }
+    .asset-frame { background:#e8e8e8; overflow:hidden; }
+    .asset-frame img { width:100%; height:100%; display:block; object-fit:contain; }
+    .asset-frame.hero-visual { background:#161616; }
+    .asset-frame.has-error { background:#e8e8e8; }
+    .asset-frame.has-error::after { content:'이미지 파일 확인 필요'; font-size:14px; color:#595959; display:block; text-align:center; padding:12px; }
+    .asset-frame.has-error img { display:none; }
+    .contact-caption { color:var(--panel); margin:0 0 24px; font-size:14px; }
+    .cta-grid { display:flex; flex-wrap:wrap; gap:16px; align-items:center; }
+    .cta-grid button, .cta-grid .contact-link { display:inline-flex; justify-content:center; align-items:center; color:var(--white); background:transparent; border:1px solid #a6a6a6; padding:15px 20px; min-height:58px; font-size:18px; text-align:center; text-decoration:none; }
+    .cta-grid .contact-link:hover { background:var(--white); color:var(--ink); border-color:var(--white); }
+    .cta-grid button { opacity:.50; cursor:not-allowed; }
+    .cta-grid button[disabled] { color:var(--white); }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    @media (max-width:768px) {
+      .nav { min-height:72px; padding:16px 20px; align-items:flex-start; }
+      .brand { font-size:20px; padding-top:6px; }
+      .menu-toggle { display:block; }
+      .nav-links { display:none; position:absolute; z-index:5; top:72px; left:0; right:0; flex-direction:column; align-items:stretch; gap:0; background:var(--white); border-top:1px solid #eee; border-bottom:1px solid var(--line); padding:12px 20px 20px; }
+      .nav-links.open { display:flex; }
+      .nav-links a { padding:12px 4px; font-size:16px; }
+      .hero { padding:48px 20px; }
+      .hero-inner { gap:24px; }
+      .hero h1 { font-size:40px; line-height:1.35; letter-spacing:-0.04em; }
+      .hero .lead { font-size:16px; }
+      .hero-action { font-size:16px; }
+      .hero-visual { height:auto; aspect-ratio:16/9; }
+      .section { padding:56px 20px; }
+      .section-heading { font-size:28px; margin-bottom:24px; }
+      .section-description { font-size:16px; }
+      .project-grid, .gallery-grid { grid-template-columns:minmax(0,1fr); gap:32px; }
+      .project-thumb { height:230px; }
+      .project-card h3 { font-size:24px; }
+      .project-card p,.card-status { font-size:16px; }
+      .gallery-hero { height:auto; aspect-ratio:16/9; }
+      .gallery-item { height:215px; }
+      .site-footer { padding:56px 20px; }
+      .cta-grid { flex-direction:column; align-items:stretch; }
+      .cta-grid button, .cta-grid .contact-link { width:100%; font-size:16px; }
+      .contact-address { font-size:16px; }
+    }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+
+    @font-face{font-family:'Noto Sans KR';font-style:normal;font-weight:400;src:url('assets/NotoSansKR-400.ttf') format('truetype');font-display:swap}
+    @font-face{font-family:'Noto Sans KR';font-style:normal;font-weight:500;src:url('assets/NotoSansKR-500.ttf') format('truetype');font-display:swap}
+    @font-face{font-family:'Noto Sans KR';font-style:normal;font-weight:700;src:url('assets/NotoSansKR-700.ttf') format('truetype');font-display:swap}
+    :root{--ink:#242820;--white:#f5f3ee;--muted:#63675e;--line:#d7d8ce}
+    body{background:var(--white)}
+    .site-header{border:0;background:var(--white)}
+    .nav{height:88px;min-height:88px;padding:30px 64px}
+    .brand{font-size:20px;line-height:28px}
+    .nav-links{gap:24px}.nav-links a{font-size:13px;font-weight:500;line-height:20px;min-width:68px}
+    .hero{position:relative;background:var(--white);color:var(--ink);padding:280px 64px 56px}
+    .hero-inner{gap:16px;align-items:center}
+    .hero-inner> :not(.hero-visual){position:relative;z-index:2;width:100%}
+    .hero .eyebrow{font-size:12px;font-weight:500;line-height:18px;letter-spacing:0;color:var(--muted)}
+    .hero h1{font-size:64px;font-weight:500;line-height:80px;letter-spacing:-.03em}
+    .hero .lead{font-size:18px;line-height:28px;color:var(--muted)}
+    .hero .hero-action{width:264px;padding:13px 20px;min-height:48px;line-height:22px;font-size:14px;font-weight:500;border-radius:4px;background:var(--ink);color:var(--white);text-decoration:none;opacity:1;cursor:pointer}
+    .hero-action:hover{background:#485140}
+    .asset-frame.hero-visual{position:absolute;inset:16px 32px auto;width:calc(100% - 64px);height:480px;aspect-ratio:auto;border-radius:16px;background:var(--white)}
+    .hero-visual img{object-fit:cover}
+    .hero-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(245,243,238,0),rgba(245,243,238,.1) 35%,rgba(245,243,238,.96) 75%,#f5f3ee)}
+    .section{padding:64px 64px 72px}
+    .section-heading{font-size:36px;font-weight:500;line-height:48px;letter-spacing:-.03em;margin:0 0 16px}
+    .section-description{font-size:16px;line-height:26px;color:var(--muted);margin:0 0 16px}
+    .project-card{gap:12px}.project-thumb{height:480px;border-radius:6px}
+    .project-thumb img{object-fit:cover}
+    .project-card h3 a{text-decoration:none}.project-card h3 a:hover{text-decoration:underline}.project-card h3{font-size:28px;line-height:40px;font-weight:500;letter-spacing:-.03em}
+    .project-card p{font-size:16px;line-height:26px;color:var(--muted)}
+    .card-status{font-size:12px;line-height:20px;color:var(--muted)}
+    .gallery-section{background:#e9ede4;border:0}
+    .gallery-hero{height:480px;aspect-ratio:auto;margin-bottom:16px}.gallery-hero img,.gallery-item img{object-fit:cover}
+    .gallery-grid{gap:24px}.gallery-item{height:240px}
+    .osulloc-visuals{margin-top:16px;padding-top:32px}
+    .osulloc-visuals h2{margin:0 0 16px;font-size:36px;font-weight:500;letter-spacing:-.03em;line-height:48px}
+    .tea-grid{display:grid;grid-template-columns:368px minmax(0,1fr);gap:16px}
+    .tea-pool{height:600px}.tea-details{display:grid;grid-template-rows:292px 292px;gap:16px;min-width:0}
+    .tea-small-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.tea-grid img{object-fit:cover}
+    .tea-glass,.tea-small-grid>.asset-frame{height:292px}
+    .site-footer{background:var(--ink);padding:64px}.site-footer .section-heading{font-size:40px;line-height:56px;margin-bottom:20px}
+    .contact-caption{font-size:12px;line-height:20px;color:#c7cebf;margin:0 0 20px}
+    .contact-address{font-size:22px;line-height:34px;margin:0 0 20px}.contact-address a{text-decoration:none}
+    .cta-grid{gap:12px}.cta-grid .contact-link,.cta-grid button{font-size:14px;line-height:22px;min-height:50px;padding:14px 16px;border-color:#737c6c;border-radius:4px}
+    .cta-grid .contact-link:nth-child(1){width:196px}.cta-grid .contact-link:nth-child(2){width:234px}.cta-grid .contact-link:nth-child(3){width:214px}.cta-grid button{width:196px;opacity:.4}
+    @media(max-width:1000px) and (min-width:769px){.hero h1{font-size:54px}.tea-grid{grid-template-columns:32% minmax(0,1fr)}.cta-grid{flex-wrap:wrap}}
+    @media(max-width:768px){
+      .nav{height:72px;min-height:72px;padding:16px 20px;align-items:center}.brand{padding:0;font-size:20px}.menu-toggle{height:40px;background:#f5f3ee;border-color:var(--line);font-size:13px;border-radius:4px}
+      .nav-links a{font-size:14px;min-height:44px}.nav-links{background:var(--white)}
+      .hero{padding:200px 20px 40px}.hero-inner{gap:16px}.hero h1{font-size:34px;line-height:46px;letter-spacing:-.03em}.hero .lead{font-size:16px;line-height:26px}.hero .hero-action{width:240px}
+      .asset-frame.hero-visual{inset:16px 20px auto;width:calc(100% - 40px);height:260px;border-radius:8px}
+      .section{padding:48px 20px 56px}.section-heading{font-size:28px;line-height:40px;margin-bottom:16px}.section-description{font-size:16px;line-height:26px;margin-bottom:16px}
+      .project-grid{gap:36px}.project-thumb{height:300px}.project-card h3{font-size:24px;line-height:34px}.project-card p{font-size:14px;line-height:24px}.card-status{font-size:12px;line-height:20px}
+      .gallery-section .section-description{font-size:14px;line-height:24px}.gallery-hero{height:220px;aspect-ratio:auto}.gallery-grid{gap:16px}.gallery-item{height:220px}
+      .osulloc-visuals h2{font-size:28px;line-height:40px}.tea-grid,.tea-details,.tea-small-grid{display:flex;flex-direction:column;gap:16px}.tea-pool{height:440px}.tea-glass,.tea-small-grid>.asset-frame{height:220px}
+      .site-footer{padding:48px 20px}.site-footer .section-heading{font-size:28px;line-height:40px;margin-bottom:20px}.contact-address{font-size:16px;line-height:26px}.contact-caption{font-size:12px;line-height:20px}
+      .cta-grid .contact-link:nth-child(n),.cta-grid button{width:100%;font-size:14px}
+    }
+    @media(max-width:360px){.hero h1{font-size:30px}}
+
+
+/* DAY48 */
+.hero{padding:32px 64px 56px}
+.asset-frame.hero-visual{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:auto;order:-2;border-radius:8px}
+.hero-visual img{height:auto;object-fit:contain}.hero-visual::after{display:none}
+.hero-caption{order:-1;margin:0 0 16px;font-size:14px;line-height:1.6;color:var(--muted);text-align:center}
+.draft-mark{font-size:14px;color:#555c50;white-space:nowrap}
+.hero .eyebrow,.card-status,.contact-caption{font-size:14px}
+.gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start}
+.gallery-card{margin:0;min-width:0}.gallery-item{height:auto;aspect-ratio:auto;background:transparent}
+.gallery-item img{height:auto;object-fit:contain}
+figcaption{margin-top:16px;font-size:16px;line-height:1.6;color:var(--ink)}
+.caption-number{display:block;font-size:14px;color:var(--muted);margin-bottom:8px}
+.project-thumb{height:auto;aspect-ratio:1/1;background:transparent}.project-thumb img{object-fit:contain}
+@media(max-width:768px){.hero{padding:16px 20px 40px}.asset-frame.hero-visual{inset:auto;width:100%;height:auto;border-radius:6px}.hero h1{font-size:34px}.gallery-grid{grid-template-columns:minmax(0,1fr);gap:32px}.gallery-item{height:auto}.hero-caption{font-size:14px}.project-card p,.gallery-section .section-description{font-size:16px}}
+  </style>
+<link rel="stylesheet" href="motion.css">
+<script src="motion.js" defer></script>
+</head>
+<body id="top">
+  <header class="site-header" aria-label="사이트 헤더">
+    <nav class="wrap nav" aria-label="주 내비게이션">
+      <a class="brand" href="#top">최민경</a>
+      <button class="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false">메뉴</button>
+      <div class="nav-links" id="site-menu">
+        <a href="#top">HOME</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+    </nav>
+  </header>
+  <main class="wrap">
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <p class="eyebrow">BX · WEB DESIGN PORTFOLIO</p>
+        <h1 id="hero-title">브랜드의 온도를<br>경험으로 연결합니다.</h1>
+        <p class="lead">브랜드의 이야기와 시각 언어를 디지털 화면으로 이어가는 디자이너, 최민경입니다.</p>
+        <a class="hero-action" href="case-647.html">대표 작업 6:47 PM 보기 ↓</a>
+        <div class="asset-frame hero-visual" role="group" aria-label="대표 비주얼" data-figma-node="6664:174"><img src="images/calore-hero-model.webp" alt="일몰의 바다를 배경으로 둥근 향수병을 얼굴 옆에 든 흰 셔츠 차림의 모델" loading="eager" decoding="async" width="1600" height="897"></div>
+        <p class="hero-caption">브랜드의 따뜻한 분위기를 인물과 일몰 장면으로 소개한다. <span class="draft-mark">설명 초안</span></p>
+      </div>
+    </section>
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <h2 class="section-heading" id="projects-title">Selected Works</h2>
+      <p class="section-description">브랜드의 감성을 여러 접점의 경험으로 확장한 작업</p>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="asset-frame project-thumb" role="group" aria-label="6:47 PM 썸네일" data-figma-node="6664:130"><img src="images/calore-detail-sunset.webp" alt="따뜻한 일몰빛 속 6:47 PM 향수 제품 사진" loading="eager" decoding="async" width="1600" height="1600"></div>
+          <h3><a href="case-647.html">6:47 PM / CALORE</a></h3>
+          <p>브랜드 아이덴티티 · 반응형 웹 · 프로모션</p>
+          <a class="card-status" href="case-647.html">프로젝트 자세히 보기 ↗</a>
+        </article>
+        <article class="project-card">
+          <div class="asset-frame project-thumb"><img src="assets/osulloc_1.webp" alt="제주 녹차밭을 배경으로 연출한 오설록 차 제품" loading="eager" decoding="async" width="941" height="1672"></div>
+          <h3>오설록</h3>
+          <p>브랜드 웹 / 취향에 따른 차 탐색</p>
+          <span class="card-status" aria-label="프로젝트 상세 미연결">상세 페이지 준비 중</span>
+        </article>
+      </div>
+    </section>
+    <section class="section gallery-section" id="gallery" aria-labelledby="gallery-title">
+      <h2 class="section-heading" id="gallery-title">6:47 PM / CALORE</h2>
+      <p class="section-description">브랜드 기초 요소, 반응형 웹 화면, 컴포넌트와 모바일 프로모션 결과물을 제작했다.</p>
+<div class="gallery-grid" aria-label="6:47 PM 갤러리 이미지 3개">
+<figure class="gallery-card"><div class="asset-frame gallery-item" data-figma-node="6664:130"><img src="images/calore-detail-sunset.webp" alt="일몰빛이 들어오는 창가의 나무 바닥 위에 놓인 둥근 앰버색 향수병" loading="eager" decoding="async" width="1600" height="1600"></div><figcaption><span class="caption-number">01</span> 빛을 통과하는 병과 원형 실루엣으로 제품의 시각적 특징을 보여준다. <span class="draft-mark">설명 초안</span></figcaption></figure>
+<figure class="gallery-card"><div class="asset-frame gallery-item" data-figma-node="6664:164"><img src="images/calore-package-ribbon.webp" alt="로마 숫자 워드마크가 인쇄된 아이보리 상자를 베이지색 리본으로 묶은 패키지" loading="eager" decoding="async" width="1402" height="1122"></div><figcaption><span class="caption-number">02</span> 브랜드의 시각 언어가 패키지로 확장되는 모습을 보여준다. <span class="draft-mark">설명 초안</span></figcaption></figure>
+<figure class="gallery-card"><div class="asset-frame gallery-item" data-figma-node="6664:162"><img src="images/calore-promotion-window.webp" alt="일몰빛이 들어오는 창가의 나무 테이블 위 향수병과 과일, 책" loading="eager" decoding="async" width="1600" height="897"></div><figcaption><span class="caption-number">03</span> 따뜻한 실내 연출을 통해 프로모션 접점의 분위기를 전달한다. <span class="draft-mark">설명 초안</span></figcaption></figure>
+</div>
+
+      <div class="osulloc-visuals">
+        <h2>오설록</h2>
+        <div class="tea-grid">
+          <div class="asset-frame tea-pool"><img src="assets/osulloc_2.webp" alt="수영장 옆 오설록 제품과 차 음료" loading="eager" decoding="async" width="941" height="1672"></div>
+          <div class="tea-details">
+            <div class="asset-frame tea-glass"><img src="assets/osulloc_3.webp" alt="유리잔에 담긴 차와 찻잎" loading="eager" decoding="async" width="1456" height="816"></div>
+            <div class="tea-small-grid">
+              <div class="asset-frame"><img src="assets/osulloc_4.webp" alt="차 원료와 꽃을 연출한 정물" loading="eager" decoding="async" width="1456" height="816"></div>
+              <div class="asset-frame"><img src="assets/osulloc_5.webp" alt="책과 찻잔을 함께 놓은 차 생활 장면" loading="eager" decoding="async" width="1456" height="816"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap site-footer" id="contact">
+    <h2 class="section-heading">함께 만들 다음 이야기를 기다립니다.</h2>
+    <p class="contact-caption">CONTACT / 이메일 · 인스타그램 · 카카오톡 · 이력서</p>
+    <div class="cta-grid">
+      <button class="contact-link" type="button" data-preparing>이메일 ↗</button>
+      <button class="contact-link" type="button" data-preparing>Instagram ↗</button>
+      <button class="contact-link" type="button" data-preparing>카카오톡 ↗</button>
+      <a class="contact-link" href="choi-minkyung-portfolio.pdf">포트폴리오 PDF ↗</a>
+      <button class="contact-link" type="button" data-preparing>이력서 ↗</button>
+    </div>
+  </footer>
+  <script>
+    // This is the only interactive control needed for this single-page DAY47 build.
+    const toggle = document.querySelector('.menu-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const isOpen = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    links.addEventListener('click', event => {
+      if (event.target.closest('a')) {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+<dialog class="preparing-dialog" aria-labelledby="preparing-title" aria-describedby="preparing-description"><p class="dialog-eyebrow">COMING SOON</p><h2 id="preparing-title">아직 준비 중입니다.</h2><p id="preparing-description">더 좋은 모습으로 찾아뵙겠습니다.<br>조금만 기다려 주세요.</p><button type="button" data-close-dialog autofocus>확인</button></dialog>
+</body>
+</html>

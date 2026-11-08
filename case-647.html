@@ -1,0 +1,199 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>6:47 PM / CALORE | 최민경</title><meta name="description" content="일몰 직전의 온기를 브랜드 비주얼로 연결한 6:47 PM / CALORE 사례"><style>
+    /* DAY47: local assets, editorial refinement of the approved structure. */
+    :root { --ink:#161616; --white:#fff; --panel:#e8e8e8; --muted:#595959; --line:#cbcbcb; --surface:#f7f7f7; --space-xs:8px; --space-sm:16px; --space-md:24px; --space-lg:32px; --space-xl:48px; --space-2xl:64px; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--white); font-family: 'Noto Sans KR', 'Noto Sans CJK KR', sans-serif; font-weight:400; line-height:1.5; word-break:keep-all; overflow-wrap:break-word; }
+    a { color:inherit; }
+    button, a { -webkit-tap-highlight-color:transparent; }
+    button { font:inherit; }
+    :focus-visible { outline:3px solid #7b7b7b; outline-offset:4px; }
+    .wrap { width:min(100%,1280px); margin-inline:auto; }
+    .site-header { background:var(--white); border-bottom:1px solid #ededed; }
+    .nav { padding:26px 64px; min-height:96px; display:flex; justify-content:space-between; align-items:center; gap:24px; }
+    .brand { font-size:22px; line-height:1.4; font-weight:700; text-decoration:none; white-space:nowrap; }
+    .nav-links { display:flex; gap:56px; align-items:center; }
+    .nav-links a { font-size:18px; text-decoration:none; white-space:nowrap; }
+    .nav-links a:hover { text-decoration:underline; text-underline-offset:8px; }
+    .menu-toggle { display:none; border:1px solid var(--line); background:#fff; border-radius:3px; padding:8px 12px; cursor:pointer; }
+    .hero { background:var(--ink); color:var(--white); padding:64px; }
+    .hero-inner { display:flex; flex-direction:column; align-items:stretch; gap:24px; }
+    .eyebrow { font-size:14px; line-height:1.5; font-weight:400; letter-spacing:0.05em; margin:0; }
+    .hero .eyebrow { text-align:center; color:var(--panel); }
+    .hero h1 { margin:0; font-size:64px; font-weight:500; line-height:1.45; text-align:center; letter-spacing:-0.035em; }
+    .hero .lead { margin:0; font-size:18px; text-align:center; line-height:1.5; }
+    .hero-action { display:flex; min-height:58px; align-items:center; justify-content:center; width:100%; padding:16px; border:0; color:var(--ink); background:var(--panel); font-size:18px; opacity:.72; cursor:not-allowed; }
+    .placeholder { width:100%; display:flex; justify-content:center; align-items:center; background:var(--panel); color:var(--muted); text-align:center; font-size:18px; padding:24px; font-weight:400; }
+    .hero-visual { aspect-ratio: 16 / 9; height:auto; }
+    .section { padding:64px; }
+    .section-heading { font-size:28px; line-height:1.45; font-weight:700; margin:0 0 24px; }
+    .section-description { font-size:18px; line-height:1.5; margin:0 0 24px; }
+    .project-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:32px; }
+    .project-card { min-width:0; display:flex; flex-direction:column; gap:16px; }
+    .project-thumb { height:310px; }
+    .project-card h3 { margin:0; font-size:28px; font-weight:700; line-height:1.45; }
+    .project-card p { margin:0; font-size:18px; }
+    .card-status { color:var(--muted); font-size:18px; display:block; }
+    .gallery-section { border-top:1px solid #ececec; }
+    .gallery-hero { aspect-ratio: 16 / 9; height:auto; margin-bottom:24px; }
+    .gallery-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+    .gallery-item { height:240px; }
+    .site-footer { background:var(--ink); color:var(--white); padding:64px; }
+    .site-footer .section-heading { margin-bottom:24px; }
+    .contact-address { margin:0 0 20px; font-size:18px; overflow-wrap:anywhere; }
+    .contact-address a { text-underline-offset:4px; }
+    .asset-frame { background:#e8e8e8; overflow:hidden; }
+    .asset-frame img { width:100%; height:100%; display:block; object-fit:contain; }
+    .asset-frame.hero-visual { background:#161616; }
+    .asset-frame.has-error { background:#e8e8e8; }
+    .asset-frame.has-error::after { content:'이미지 파일 확인 필요'; font-size:14px; color:#595959; display:block; text-align:center; padding:12px; }
+    .asset-frame.has-error img { display:none; }
+    .contact-caption { color:var(--panel); margin:0 0 24px; font-size:14px; }
+    .cta-grid { display:flex; flex-wrap:wrap; gap:16px; align-items:center; }
+    .cta-grid button, .cta-grid .contact-link { display:inline-flex; justify-content:center; align-items:center; color:var(--white); background:transparent; border:1px solid #a6a6a6; padding:15px 20px; min-height:58px; font-size:18px; text-align:center; text-decoration:none; }
+    .cta-grid .contact-link:hover { background:var(--white); color:var(--ink); border-color:var(--white); }
+    .cta-grid button { opacity:.50; cursor:not-allowed; }
+    .cta-grid button[disabled] { color:var(--white); }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    @media (max-width:768px) {
+      .nav { min-height:72px; padding:16px 20px; align-items:flex-start; }
+      .brand { font-size:20px; padding-top:6px; }
+      .menu-toggle { display:block; }
+      .nav-links { display:none; position:absolute; z-index:5; top:72px; left:0; right:0; flex-direction:column; align-items:stretch; gap:0; background:var(--white); border-top:1px solid #eee; border-bottom:1px solid var(--line); padding:12px 20px 20px; }
+      .nav-links.open { display:flex; }
+      .nav-links a { padding:12px 4px; font-size:16px; }
+      .hero { padding:48px 20px; }
+      .hero-inner { gap:24px; }
+      .hero h1 { font-size:40px; line-height:1.35; letter-spacing:-0.04em; }
+      .hero .lead { font-size:16px; }
+      .hero-action { font-size:16px; }
+      .hero-visual { height:auto; aspect-ratio:16/9; }
+      .section { padding:56px 20px; }
+      .section-heading { font-size:28px; margin-bottom:24px; }
+      .section-description { font-size:16px; }
+      .project-grid, .gallery-grid { grid-template-columns:minmax(0,1fr); gap:32px; }
+      .project-thumb { height:230px; }
+      .project-card h3 { font-size:24px; }
+      .project-card p,.card-status { font-size:16px; }
+      .gallery-hero { height:auto; aspect-ratio:16/9; }
+      .gallery-item { height:215px; }
+      .site-footer { padding:56px 20px; }
+      .cta-grid { flex-direction:column; align-items:stretch; }
+      .cta-grid button, .cta-grid .contact-link { width:100%; font-size:16px; }
+      .contact-address { font-size:16px; }
+    }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+
+    @font-face{font-family:'Noto Sans KR';font-style:normal;font-weight:400;src:url('assets/NotoSansKR-400.ttf') format('truetype');font-display:swap}
+    @font-face{font-family:'Noto Sans KR';font-style:normal;font-weight:500;src:url('assets/NotoSansKR-500.ttf') format('truetype');font-display:swap}
+    @font-face{font-family:'Noto Sans KR';font-style:normal;font-weight:700;src:url('assets/NotoSansKR-700.ttf') format('truetype');font-display:swap}
+    :root{--ink:#242820;--white:#f5f3ee;--muted:#63675e;--line:#d7d8ce}
+    body{background:var(--white)}
+    .site-header{border:0;background:var(--white)}
+    .nav{height:88px;min-height:88px;padding:30px 64px}
+    .brand{font-size:20px;line-height:28px}
+    .nav-links{gap:24px}.nav-links a{font-size:13px;font-weight:500;line-height:20px;min-width:68px}
+    .hero{position:relative;background:var(--white);color:var(--ink);padding:280px 64px 56px}
+    .hero-inner{gap:16px;align-items:center}
+    .hero-inner> :not(.hero-visual){position:relative;z-index:2;width:100%}
+    .hero .eyebrow{font-size:12px;font-weight:500;line-height:18px;letter-spacing:0;color:var(--muted)}
+    .hero h1{font-size:64px;font-weight:500;line-height:80px;letter-spacing:-.03em}
+    .hero .lead{font-size:18px;line-height:28px;color:var(--muted)}
+    .hero .hero-action{width:264px;padding:13px 20px;min-height:48px;line-height:22px;font-size:14px;font-weight:500;border-radius:4px;background:var(--ink);color:var(--white);text-decoration:none;opacity:1;cursor:pointer}
+    .hero-action:hover{background:#485140}
+    .asset-frame.hero-visual{position:absolute;inset:16px 32px auto;width:calc(100% - 64px);height:480px;aspect-ratio:auto;border-radius:16px;background:var(--white)}
+    .hero-visual img{object-fit:cover}
+    .hero-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(245,243,238,0),rgba(245,243,238,.1) 35%,rgba(245,243,238,.96) 75%,#f5f3ee)}
+    .section{padding:64px 64px 72px}
+    .section-heading{font-size:36px;font-weight:500;line-height:48px;letter-spacing:-.03em;margin:0 0 16px}
+    .section-description{font-size:16px;line-height:26px;color:var(--muted);margin:0 0 16px}
+    .project-card{gap:12px}.project-thumb{height:480px;border-radius:6px}
+    .project-thumb img{object-fit:cover}
+    .project-card h3{font-size:28px;line-height:40px;font-weight:500;letter-spacing:-.03em}
+    .project-card p{font-size:16px;line-height:26px;color:var(--muted)}
+    .card-status{font-size:12px;line-height:20px;color:var(--muted)}
+    .gallery-section{background:#e9ede4;border:0}
+    .gallery-hero{height:480px;aspect-ratio:auto;margin-bottom:16px}.gallery-hero img,.gallery-item img{object-fit:cover}
+    .gallery-grid{gap:24px}.gallery-item{height:240px}
+    .osulloc-visuals{margin-top:16px;padding-top:32px}
+    .osulloc-visuals h2{margin:0 0 16px;font-size:36px;font-weight:500;letter-spacing:-.03em;line-height:48px}
+    .tea-grid{display:grid;grid-template-columns:368px minmax(0,1fr);gap:16px}
+    .tea-pool{height:600px}.tea-details{display:grid;grid-template-rows:292px 292px;gap:16px;min-width:0}
+    .tea-small-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.tea-grid img{object-fit:cover}
+    .tea-glass,.tea-small-grid>.asset-frame{height:292px}
+    .site-footer{background:var(--ink);padding:64px}.site-footer .section-heading{font-size:40px;line-height:56px;margin-bottom:20px}
+    .contact-caption{font-size:12px;line-height:20px;color:#c7cebf;margin:0 0 20px}
+    .contact-address{font-size:22px;line-height:34px;margin:0 0 20px}.contact-address a{text-decoration:none}
+    .cta-grid{gap:12px}.cta-grid .contact-link,.cta-grid button{font-size:14px;line-height:22px;min-height:50px;padding:14px 16px;border-color:#737c6c;border-radius:4px}
+    .cta-grid .contact-link:nth-child(1){width:196px}.cta-grid .contact-link:nth-child(2){width:234px}.cta-grid .contact-link:nth-child(3){width:214px}.cta-grid button{width:196px;opacity:.4}
+    @media(max-width:1000px) and (min-width:769px){.hero h1{font-size:54px}.tea-grid{grid-template-columns:32% minmax(0,1fr)}.cta-grid{flex-wrap:wrap}}
+    @media(max-width:768px){
+      .nav{height:72px;min-height:72px;padding:16px 20px;align-items:center}.brand{padding:0;font-size:20px}.menu-toggle{height:40px;background:#f5f3ee;border-color:var(--line);font-size:13px;border-radius:4px}
+      .nav-links a{font-size:14px;min-height:44px}.nav-links{background:var(--white)}
+      .hero{padding:200px 20px 40px}.hero-inner{gap:16px}.hero h1{font-size:34px;line-height:46px;letter-spacing:-.03em}.hero .lead{font-size:16px;line-height:26px}.hero .hero-action{width:240px}
+      .asset-frame.hero-visual{inset:16px 20px auto;width:calc(100% - 40px);height:260px;border-radius:8px}
+      .section{padding:48px 20px 56px}.section-heading{font-size:28px;line-height:40px;margin-bottom:16px}.section-description{font-size:16px;line-height:26px;margin-bottom:16px}
+      .project-grid{gap:36px}.project-thumb{height:300px}.project-card h3{font-size:24px;line-height:34px}.project-card p{font-size:14px;line-height:24px}.card-status{font-size:12px;line-height:20px}
+      .gallery-section .section-description{font-size:14px;line-height:24px}.gallery-hero{height:220px;aspect-ratio:auto}.gallery-grid{gap:16px}.gallery-item{height:220px}
+      .osulloc-visuals h2{font-size:28px;line-height:40px}.tea-grid,.tea-details,.tea-small-grid{display:flex;flex-direction:column;gap:16px}.tea-pool{height:440px}.tea-glass,.tea-small-grid>.asset-frame{height:220px}
+      .site-footer{padding:48px 20px}.site-footer .section-heading{font-size:28px;line-height:40px;margin-bottom:20px}.contact-address{font-size:16px;line-height:26px}.contact-caption{font-size:12px;line-height:20px}
+      .cta-grid .contact-link:nth-child(n),.cta-grid button{width:100%;font-size:14px}
+    }
+    @media(max-width:360px){.hero h1{font-size:30px}}
+
+
+/* DAY48 */
+.hero{padding:32px 64px 56px}
+.asset-frame.hero-visual{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:auto;order:-2;border-radius:8px}
+.hero-visual img{height:auto;object-fit:contain}.hero-visual::after{display:none}
+.hero-caption{order:-1;margin:0 0 16px;font-size:14px;line-height:1.6;color:var(--muted);text-align:center}
+.draft-mark{font-size:14px;color:#555c50;white-space:nowrap}
+.hero .eyebrow,.card-status,.contact-caption{font-size:14px}
+.gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start}
+.gallery-card{margin:0;min-width:0}.gallery-item{height:auto;aspect-ratio:auto;background:transparent}
+.gallery-item img{height:auto;object-fit:contain}
+figcaption{margin-top:16px;font-size:16px;line-height:1.6;color:var(--ink)}
+.caption-number{display:block;font-size:14px;color:var(--muted);margin-bottom:8px}
+.project-thumb{height:auto;aspect-ratio:1/1;background:transparent}.project-thumb img{object-fit:contain}
+@media(max-width:768px){.hero{padding:16px 20px 40px}.asset-frame.hero-visual{inset:auto;width:100%;height:auto;border-radius:6px}.hero h1{font-size:34px}.gallery-grid{grid-template-columns:minmax(0,1fr);gap:32px}.gallery-item{height:auto}.hero-caption{font-size:14px}.project-card p,.gallery-section .section-description{font-size:16px}}
+  .case h1{font-size:56px;line-height:1.3;letter-spacing:-.03em;margin:24px 0}.case h2{font-size:32px;font-weight:500;margin:16px 0}.case h3{font-size:24px;font-weight:500;line-height:1.6}.case p{font-size:18px;line-height:1.7}.case .eyebrow{font-size:14px;color:var(--muted);margin-top:24px}.case-main{width:100%;height:auto;margin-top:32px;border-radius:8px}.case-section{border-top:1px solid var(--line)}.case-lead{max-width:850px}.strategy-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}.strategy-grid>div{padding:24px;background:#e9ede4}.strategy-grid span{font-size:14px;color:var(--muted)}.strategy-grid p{font-size:16px;margin-bottom:0}.case-results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:32px}.case-results figure{margin:0}.case-results img{width:100%;height:auto;display:block}.case .note{font-size:14px;color:var(--muted)}@media(max-width:768px){.case h1{font-size:36px}.case h2{font-size:28px}.case h3{font-size:20px}.case p{font-size:16px}.strategy-grid{grid-template-columns:1fr 1fr}.case-results{grid-template-columns:1fr}}</style><link rel="stylesheet" href="motion.css">
+<script src="motion.js" defer></script>
+</head><body>  <header class="site-header" aria-label="사이트 헤더">
+    <nav class="wrap nav" aria-label="주 내비게이션">
+      <a class="brand" href="index.html#top">최민경</a>
+      <button class="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false">메뉴</button>
+      <div class="nav-links" id="site-menu">
+        <a href="index.html#top">HOME</a>
+        <a href="index.html#projects">PROJECTS</a>
+        <a href="index.html#contact">CONTACT</a>
+      </div>
+    </nav>
+  </header>
+<main class="wrap case"><section class="section case-intro"><a href="index.html#projects">← 프로젝트 목록으로</a><p class="eyebrow">BRAND EXPERIENCE / CASE STUDY 01</p><h1>6:47 PM / CALORE</h1><p class="case-lead">오후 6시 47분, 하루의 끝에 머무는 온기를 향과 시각 경험으로 표현한 프래그런스 브랜드 프로젝트다.</p><img class="case-main" src="images/calore-hero-model.webp" width="1600" height="897" alt="일몰의 바다를 배경으로 향수병을 든 모델"></section><section class="section case-section"><p class="eyebrow">01 / CASE STUDY</p><h2>문제 정의</h2><h3>보이지 않는 향과 하루 끝의 온기를 시각적으로 전달하는 방법을 고민했다.</h3><p>일몰 직전의 시간을 브랜드의 출발점으로 삼고, 향수의 감정적 인상과 제품 정보를 함께 전달하는 시각적 경험을 기획했다. 브랜드의 분위기를 보여주는 동시에 사용자가 향의 성격과 사용 장면을 이해할 수 있는 구성이 필요했다.</p></section><section class="section case-section"><p class="eyebrow">02 / CASE STUDY</p><h2>리서치</h2><h3>브랜드의 인상을 구성할 수 있는 빛, 원료, 색감과 생활 장면을 탐색했다.</h3><p>DAY5 무드보드와 키워드 정리, 향 원료 이미지 및 공간·제품 레퍼런스를 바탕으로 시각적 단서를 정리했다. 이는 브랜드 표현을 위한 탐색이며, 사용자 인터뷰나 선호도 검증 결과를 뜻하지 않는다.</p></section><section class="section case-section"><p class="eyebrow">03 / CASE STUDY</p><h2>브랜드 전략</h2><h3>6:47 PM이라는 시간적 상징을 브랜드 언어와 이미지 경험으로 연결했다.</h3><p>노을의 온기를 중심으로 크림·브라운 계열, 자연광, 잔잔한 공간 이미지, 향조 표현을 연결했다. 로고·키비주얼·웹·프로모션에서 같은 분위기를 유지하되 각 매체에 맞게 정보의 순서와 이미지 비율을 조정했다.</p><div class="strategy-grid"><div><span>TIME</span><p>6:47 PM / 일몰 직전</p></div><div><span>EMOTION</span><p>온기 · 휴식 · 잔향</p></div><div><span>VISUAL</span><p>자연광 · 유리 · 우드</p></div><div><span>TOUCHPOINT</span><p>웹 · 콘텐츠 · 프로모션</p></div></div></section><section class="section case-section"><p class="eyebrow">04 / CASE STUDY</p><h2>디자인 결과</h2><h3>브랜드 아이덴티티를 로고, 향수 비주얼, 웹 및 프로모션 디자인으로 구체화했다.</h3><p>6:47 PM / CALORE의 시각 체계와 제품 이미지, 랜딩페이지·반응형 화면 및 매체별 프로모션 작업물을 제작했다. 이 결과는 제작된 디자인 산출물에 대한 설명이며 실제 판매량이나 구매 전환 성과는 확인하지 않았다.</p><div class="case-results"><figure><img src="images/calore-detail-sunset.webp" alt="일몰빛을 받은 둥근 향수병"><figcaption>제품 비주얼</figcaption></figure><figure><img src="images/calore-package-ribbon.webp" alt="리본으로 묶은 아이보리 패키지"><figcaption>패키지 적용</figcaption></figure><figure><img src="images/calore-promotion-window.webp" alt="일몰 창가의 향수병과 책"><figcaption>프로모션 비주얼</figcaption></figure></div></section><section class="section case-section"><p class="eyebrow">05 / CASE STUDY</p><h2>배움과 다음 단계</h2><h3>일관된 감성 표현뿐 아니라 매체별 정보 위계와 이미지 활용 기준을 함께 설계할 필요가 있다.</h3><p>브랜드 이미지를 다양한 화면과 콘텐츠로 확장하면서 같은 분위기를 유지하되, 이미지 비율과 텍스트의 우선순위를 매체별로 조정하는 방향을 정리했다. 다음 단계에서는 실제 타깃을 대상으로 브랜드 인상과 제품 정보의 이해도를 검증할 수 있다.</p><p class="note">회고는 기존 케이스 설계안의 초안이다. 실제 사용자 검증은 다음 단계의 제안이다.</p></section><section class="section"><a href="index.html#projects">← 다른 프로젝트 살펴보기</a></section></main>  <footer class="wrap site-footer" id="contact">
+    <h2 class="section-heading">함께 만들 다음 이야기를 기다립니다.</h2>
+    <p class="contact-caption">CONTACT / 이메일 · 인스타그램 · 카카오톡 · 이력서</p>
+    <div class="cta-grid">
+      <button class="contact-link" type="button" data-preparing>이메일 ↗</button>
+      <button class="contact-link" type="button" data-preparing>Instagram ↗</button>
+      <button class="contact-link" type="button" data-preparing>카카오톡 ↗</button>
+      <a class="contact-link" href="choi-minkyung-portfolio.pdf">포트폴리오 PDF ↗</a>
+      <button class="contact-link" type="button" data-preparing>이력서 ↗</button>
+    </div>
+  </footer>
+  <script>
+    // This is the only interactive control needed for this single-page DAY47 build.
+    const toggle = document.querySelector('.menu-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const isOpen = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    links.addEventListener('click', event => {
+      if (event.target.closest('a')) {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+<dialog class="preparing-dialog" aria-labelledby="preparing-title" aria-describedby="preparing-description"><p class="dialog-eyebrow">COMING SOON</p><h2 id="preparing-title">아직 준비 중입니다.</h2><p id="preparing-description">더 좋은 모습으로 찾아뵙겠습니다.<br>조금만 기다려 주세요.</p><button type="button" data-close-dialog autofocus>확인</button></dialog>
+</body></html>
